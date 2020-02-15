@@ -10,6 +10,7 @@
 <p>Выполненное задание:</p>
 <p>Введите число:<input type="number" name="" id="input1">
 <button onclick="func1()">Выполнить</button>
+<button onclick="funcC1()">Очистить</button>
 </p>
 <p>Ответ: <dev id="out1"></dev></p>
 
@@ -22,8 +23,11 @@
 		out.innerHTML = "Привет";
 		}
 		else out.innerHTML = "";
+	}
 
+	function funcC1() {
 		document.getElementById("input1").value = "";
+		document.getElementById("out1").innerHTML  = "";
 	}
 </script>
 
@@ -76,7 +80,8 @@
 			arr.push(item);
 		})
 
-		out.innerHTML = arr;
+		if(arr == '') out.innerHTML = "В массиве нет чисел кратных трём";
+		else out.innerHTML = arr;
 	}
 
 	function funcС3() {

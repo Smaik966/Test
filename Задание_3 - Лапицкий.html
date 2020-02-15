@@ -5,21 +5,19 @@
 </head>
 <body>
 <script type="text/javascript">
-	function func(a)
-	{
+	function func(a) {
 		var arr = [];
-		a.forEach(function(item,i,a){
-			if(parseInt(item)%3 == 0)
+		a.forEach(function(item, i, a) {
+			if(parseInt(item) % 3 == 0)
 			arr.push(item);
 		})
 		alert(`Элементы массива катные 3: ${arr}`);
-	};
+	}
 
-	while(true)
-	{
-	var input = prompt('Введите элементы массива через пробел:');
-	if(input == null) break;
-	func(input.split(' '));
+	while(true) {
+		var input = prompt('Введите элементы массива через пробел:');
+		if(input == null) break;
+		func( input.split(' ') );
 	}
 </script>
 </body>

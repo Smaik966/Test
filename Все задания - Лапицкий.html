@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ТЗ</title>
+</head>
+<body>
+
+<h2>Задание номер 1</h2>
+<p>Условие: Составить алгоритм: если введенное число больше 7, то вывести “Привет”</p>
+<p>Выполненное задание:</p>
+<p>Введите число:<input type="number" name="" id="input1">
+<button onclick="func1()">Выполнить</button>
+</p>
+<p>Ответ: <dev id="out1"></dev></p>
+
+<script type="text/javascript">
+	function func1() {
+		var input = document.getElementById("input1").value;
+		var out = document.getElementById("out1");
+
+		if(input > 7) {
+		out.innerHTML = "Привет";
+		}
+		else out.innerHTML = "";
+
+		document.getElementById("input1").value = "";
+	}
+</script>
+
+
+<h2>Задание номер 2</h2>
+<p>	Условие: Составить алгоритм: если введенное имя совпадает с Вячеслав, то вывести “Привет, Вячеслав”, если нет, то вывести "Нет такого имени"</p>
+<p>Выполненное задание:</p>
+<p>Введите имя:<input type="text" name="" id="input2">
+<button onclick="func2()">Выполнить</button>
+<button onclick="funcС2()">Очистить</button>
+</p>
+<p>Ответ: <dev id="out2"></dev></p>
+
+<script type="text/javascript">
+	function func2() {
+		var input = document.getElementById("input2").value;
+		var out = document.getElementById("out2");
+
+		if(input == "Вячеслав") {
+		out.innerHTML = "Привет, Вячеслав";
+		}
+		else out.innerHTML = "Нет такого имени";
+	}
+
+	function funcС2() {
+		document.getElementById("input2").value = "";
+		document.getElementById("out2").innerHTML  = "";
+	}
+</script>
+
+
+<h2>Задание номер 3</h2>
+<p>	Условие: Составить алгоритм: на входе есть числовой массив, необходимо вывести элементы массива кратные 3</p>
+<p>Выполненное задание:</p>
+<p>Введите элементы массива через пробел:<input type="" name="" id="input3">
+<button onclick="func3()">Выполнить</button>
+<button onclick="funcС3()">Очистить</button>
+</p>
+<p>Элементы массива катные трём: <dev id="out3"></dev></p>
+
+<script type="text/javascript">
+	function func3() {
+		var input = document.getElementById("input3").value.split(' ');
+		var out = document.getElementById("out3");
+
+		var arr = [];
+
+		input.forEach(function(item, i, input) {
+			if(item % 3 == 0 && item != '')
+			arr.push(item);
+		})
+
+		out.innerHTML = arr;
+	}
+
+	function funcС3() {
+		document.getElementById("input3").value = "";
+		document.getElementById("out3").innerHTML  = "";
+	}
+</script>
+
+
+<h2>Задание номер 4</h2>
+<p>Дана скобочная последовательность: [((())()(())]]</p>
+<p>- Можно ли считать эту последовательность правильной?</p>
+<p>Ответ: Нет</p>
+<p>- Если ответ на предыдущий вопрос “нет” - то что необходимо в ней изменить, чтоб она стала правильной?</p>
+<p>Ответ: Для того чтобы данная последовательность стала правильной в ней необходимо заменить вторую скобку “(” на “[” и получим [[(())()(())]] или предпоследнюю скобку “[” на “)” и получим [((())()(()))]</p>
+
+</body>
+</html>

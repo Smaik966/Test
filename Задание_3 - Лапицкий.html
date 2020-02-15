@@ -8,7 +8,7 @@
 	function func(a) {
 		var arr = [];
 		a.forEach(function(item, i, a) {
-			if(parseInt(item) % 3 == 0)
+			if(item % 3 == 0 && item != '')
 			arr.push(item);
 		})
 		alert(`Элементы массива катные 3: ${arr}`);
